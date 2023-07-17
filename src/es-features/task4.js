@@ -34,17 +34,16 @@ export const task4New = () => {
   const x = 10;
   const y = 20;
 
+  const foo = () => 'test';
+
   const obj = {
     x,
     y,
     bar() {
       return this.x + this.y;
     },
+    [`baz${foo()}`]: 'new field',
   };
-
-  const foo = () => 'test';
-
-  obj['baz' + foo()] = 'new field';
 
   return obj;
 };
