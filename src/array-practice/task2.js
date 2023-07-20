@@ -15,3 +15,7 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+
+// eslint-disable-next-line import/prefer-default-export
+export const arrayDiff = (a1, a2) =>
+  [...a1, ...a2].filter((x) => !(a1.includes(x) && a2.includes(x)));
